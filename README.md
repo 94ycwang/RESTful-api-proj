@@ -109,6 +109,7 @@ URL: http://api.local.com/1.0
 | user_id | int | author |
 | create_time | timestamp | article creation time |
 
-Reference：
 
-https://www.bilibili.com/video/BV1jb411J7zK?p=17
+#### Reference：
+
+This dmo was designed and improved based on https://www.bilibili.com/video/BV1jb411J7zK?p=17
