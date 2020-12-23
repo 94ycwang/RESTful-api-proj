@@ -1,4 +1,7 @@
 # RESTful-api-proj
+
+A simple RESTful API Demo in PHP.
+
 ## Tech Stack 
 
 WampServer Version 3.2.3:
@@ -8,6 +11,33 @@ WampServer Version 3.2.3:
 - MySQL 8.0.21 
 
 - PHP 7.3.21
+
+## Environment Setup
+
+
+
+C:\\Windows\System32\drivers\etc\hosts
+```
+127.0.0.1 api.local.com
+::1 localhost
+```
+
+<br/>
+
+wamp64\bin\apache\apache2.4.46\conf\extra\httpd-vhosts.conf
+
+```
+<VirtualHost *:80>
+  ServerName api.local.com
+  ServerAlias localapi
+  DocumentRoot "${INSTALL_DIR}/www/api"
+  <Directory "${INSTALL_DIR}/www/api">
+    Options +Indexes +Includes +FollowSymLinks +MultiViews
+    AllowOverride All
+    Require local
+  </Directory>
+</VirtualHost>
+```
 
 ## API Design
 
@@ -79,4 +109,6 @@ URL: http://api.local.com/1.0
 | user_id | int | author |
 | create_time | timestamp | article creation time |
 
-API design doc
+Reference：
+
+https://www.bilibili.com/video/BV1jb411J7zK?p=17
