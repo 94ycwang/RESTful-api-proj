@@ -1,6 +1,6 @@
 # RESTful-api-proj
 
-A simple RESTful API Demo in PHP.
+A simple RESTful API demo in PHP.
 
 ## Tech Stack 
 
@@ -14,30 +14,32 @@ WampServer Version 3.2.3:
 
 ## Environment Setup
 
+- Step1: configure wampstack to setup a new virtual host in ``httpd-vhosts.conf``
 
+  wamp64\bin\apache\apache2.4.46\conf\extra\httpd-vhosts.conf
 
-C:\\Windows\System32\drivers\etc\hosts
-```
-127.0.0.1 api.local.com
-::1 localhost
-```
+  ```
+  <VirtualHost *:80>
+    ServerName api.local.com
+    ServerAlias localapi
+    DocumentRoot "${INSTALL_DIR}/www/api"
+    <Directory "${INSTALL_DIR}/www/api">
+      Options +Indexes +Includes +FollowSymLinks +MultiViews
+      AllowOverride All
+      Require local
+    </Directory>
+  </VirtualHost>
+  ```
 
 <br/>
 
-wamp64\bin\apache\apache2.4.46\conf\extra\httpd-vhosts.conf
+- Step2: configure system file ``hosts`` to bind the domain name to an IP address
 
-```
-<VirtualHost *:80>
-  ServerName api.local.com
-  ServerAlias localapi
-  DocumentRoot "${INSTALL_DIR}/www/api"
-  <Directory "${INSTALL_DIR}/www/api">
-    Options +Indexes +Includes +FollowSymLinks +MultiViews
-    AllowOverride All
-    Require local
-  </Directory>
-</VirtualHost>
-```
+  C:\\Windows\System32\drivers\etc\hosts
+  ```
+  127.0.0.1 api.local.com
+  ::1 localhost
+  ```
 
 ## API Design
 
