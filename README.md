@@ -14,9 +14,9 @@ WampServer Version 3.2.3:
 
 ## Environment Setup
 
-- Step1: configure wampstack to setup a new virtual host in ``httpd-vhosts.conf``
+- Step1- configure wampstack to setup a new virtual host in ``httpd-vhosts.conf``
 
-  wamp64\bin\apache\apache2.4.46\conf\extra\httpd-vhosts.conf
+  - File path: wamp64\bin\apache\apache2.4.46\conf\extra\httpd-vhosts.conf
 
   ```
   <VirtualHost *:80>
@@ -33,9 +33,9 @@ WampServer Version 3.2.3:
 
 <br/>
 
-- Step2: configure system file ``hosts`` to bind the domain name to an IP address
+- Step2- configure system file ``hosts`` to bind the domain name to an IP address
 
-  C:\\Windows\System32\drivers\etc\hosts
+  - File path: C:\\Windows\System32\drivers\etc\hosts
   ```
   127.0.0.1 api.local.com
   ::1 localhost
@@ -111,7 +111,7 @@ URL: http://api.local.com/1.0
 | user_id | int | author |
 | create_time | timestamp | article creation time |
 
-
+---
 #### Reference：
 
 This demo was designed and improved based on https://www.bilibili.com/video/BV1jb411J7zK?p=17
